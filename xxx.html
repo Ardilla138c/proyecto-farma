@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmardilla</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Iconos CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Animaciones -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        
+        /* Casos especiales */
+        .section-title {
+            font-size: 3rem; /* Ajusta según el tamaño deseado */
+            color: rgba(250, 255, 242, 0.811);
+            text-shadow: 2px 2px 5px rgba(24, 28, 240, 0.872);
+            text-align: center; /* Opcional, para centrar el texto */
+        }
+        
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .img-left, .img-right {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        /* opacidad de animacion */
+        .aos-init {
+            opacity: 0;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.5rem; 
+        }
+        .social-icons i {
+            font-size: 1.8rem; 
+        }
+        .h5 {
+            font-size: 2rem; 
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body style="background-color: #fffffff7;">
+    
+    
+    <!-- Barr         supe -->
+    <div class="bg-write text-dark py-2" style="font-family: Bodoni MT;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <img src="/images/farmardilla.jpg" alt="farmacias" style="height: 90px; margin-right: 10px; margin-bottom:auto ">
+                <span class="h5" style="margin-top: font font-family: Bodoni MT, "Helvetica Neue", Helvetica, sans-serif; 20px;"></span>
+            </div>
+            <div class="social-icons">
+                <!-- iconos redes sociales -->
+                <a href="#" class="text-dark mx-2"><i class="bi bi-facebook" style="height: 90px;"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra  navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0317aa;">
+        
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ms-4"><a class="nav-link" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Inicio </a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="productos.html"><i class="bi bi-newspaper"></i> Producto</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="us.html"><i class="bi bi-person"></i> Nosotros</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="login.html"><i class="bi-box-arrow-in-right"></i> Login</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="usuario.html"><i class="bi bi-envelope"></i> Usuario</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="envio.html"><i class="bi bi-envelope"></i> Envio-recojo</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="factura.html"><i class="bi bi-envelope"></i> factura</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="inventario.html"><i class="bi bi-envelope"></i> Inventario</a></li>
+                </ul>nta
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    
+    <!-- Introduccion -->
+    <section class="container my-5">
+        <h2 class="section-title text-center text-white" data-aos="fade-up ">¿Quiénes Somos?</h2>
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                <p class="section-content text-white">
+                    Somos estudiantes de la UPDS  cursando  la materia Desarrollo de sistem loren ipsum xd.
+                </p>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                <img src="/images/farmardilla.jpg" class="img-center" alt="" style="width: 500px; height: 280px; padding: 0%;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gerente -->
+    <section class="container my-5 bg-custom py-5">
+        <h2 class="section-title text-center" data-aos="fade-up">Gerente genreal</h2>
+        <div class="row">
+            <!-- nosotros -->
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card shadow card-team text-center">
+                    <img src="images/claud.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Claudia Zapata</h5>
+                        <p class="card-text">Estudiante de la UPDS, conocido por su experiencia en copy page.</p>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</section>
+        </div>
+    </section>
+    <footer class="bg-red-700 text-white text-center py-4 mt-6"> 
+
+        <p style="background-color: rgba(24, 28, 240, 0.872); color: white; padding: 10px; text-align: center;">&copy; 2025 Claudia Zapata.Desarrollo de sistemas UPDS Todos los derechos reservados.</p>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
+
+

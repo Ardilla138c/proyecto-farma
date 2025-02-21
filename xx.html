@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmardilla</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Iconos CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Animaciones -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        
+        /* Casos especiales */
+        .section-title {
+            font-size: 3rem; /* Ajusta según el tamaño deseado */
+            color: rgba(250, 255, 242, 0.811);
+            text-shadow: 2px 2px 5px rgba(24, 28, 240, 0.872);
+            text-align: center; /* Opcional, para centrar el texto */
+        }
+        
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .img-left, .img-right {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        /* opacidad de animacion */
+        .aos-init {
+            opacity: 0;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.5rem; 
+        }
+        .social-icons i {
+            font-size: 1.8rem; 
+        }
+        .h5 {
+            font-size: 2rem; 
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body style="background-color: #fffffff7;">
+    
+    
+    <!-- Barr         supe -->
+    <div class="bg-write text-dark py-2" style="font-family: Bodoni MT;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <img src="/images/farmardilla.jpg" alt="farmacias" style="height: 90px; margin-right: 10px; margin-bottom:auto ">
+                <span class="h5" style="margin-top: font font-family: Bodoni MT, "Helvetica Neue", Helvetica, sans-serif; 20px;"></span>
+            </div>
+            <div class="social-icons">
+                <!-- iconos redes sociales -->
+                <a href="#" class="text-dark mx-2"><i class="bi bi-facebook" style="height: 90px;"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra  navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0317aa;">
+        
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ms-4"><a class="nav-link" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Inicio </a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="productos.html"><i class="bi bi-newspaper"></i> Producto</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="us.html"><i class="bi bi-person"></i> Nosotros</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="login.html"><i class="bi-box-arrow-in-right"></i> Login</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="usuario.html"><i class="bi bi-envelope"></i> Usuario</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="envio.html"><i class="bi bi-envelope"></i> Envio-recojo</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="factura.html"><i class="bi bi-envelope"></i> factura</a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="inventario.html"><i class="bi bi-envelope"></i> Inventario</a></li>
+                </ul>nta
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Contenedor del formulario de Usuario -->
+    <div class="container d-flex justify-content-center align-items-center vh-100" style="margin-top: -100px;">
+        <div class="row w-100">
+            <div class="col-md-6 col-lg-6 mx-auto">
+                <div class="card shadow-lg p-4">
+                    <h2 class="text-center mb-4">Registro de Usuario</h2>
+                    <form id="usuarioForm">
+                        <div class="mb-3">
+                            <label for="idCliente" class="form-label">Ingrese su numero de carnet de identidad</label>
+                            <input type="number" class="form-control" id="idCliente" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombreCliente" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreCliente" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edadCliente" class="form-label">Edad</label>
+                            <input type="number" class="form-control" id="edadCliente" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="genero" class="form-label">Género</label>
+                            <select class="form-select" id="genero" required>
+                                <option value="">Seleccione una opción</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="direccion" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correoElectronico" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correoElectronico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nit" class="form-label">NIT</label>
+                            <input type="text" class="form-control" id="nit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="factura" class="form-label">Factura</label>
+                            <input type="text" class="form-control" id="factura" required>
+                        </div>
+
+                        <button type="button" class="btn btn-primary w-100" onclick="registrar()">Registrar</button>
+                        <button type="button" class="btn btn-primary w-100 mt-2" onclick="generarPDF()">Descargar Registro en PDF</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-red-700 text-white text-center py-4 mt-6"> 
+
+        <p style="background-color: #0317aa; color: white; padding: 10px; text-align: center;">&copy; 2025 Claudia Zapata.Desarrollo de sistemas UPDS Todos los derechos reservados.</p>
+
+    </footer>
+
+    <!-- Función para generar PDF -->
+    <script>
+        function generarPDF() {
+            // Obtener los valores del formulario
+            var idCliente = document.getElementById("idCliente").value;
+            var nombreCliente = document.getElementById("nombreCliente").value;
+            var edadCliente = document.getElementById("edadCliente").value;
+            var genero = document.getElementById("genero").value;
+            var direccion = document.getElementById("direccion").value;
+            var telefono = document.getElementById("telefono").value;
+            var correoElectronico = document.getElementById("correoElectronico").value;
+            var nit = document.getElementById("nit").value;
+            var factura = document.getElementById("factura").value;
+
+            // Verificar que los campos no estén vacíos
+            if (!idCliente || !nombreCliente || !edadCliente || !genero || !direccion || !telefono || !correoElectronico || !nit || !factura) {
+                alert("Por favor, completa todos los campos antes de generar el PDF.");
+                return;
+            }
+
+            // Crear un nuevo documento PDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Configuración del PDF
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(16);
+            doc.text("Registro de Usuario - Farmardilla", 20, 20);
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(12);
+            doc.text("ID Cliente: " + idCliente, 20, 40);
+            doc.text("Nombre Completo: " + nombreCliente, 20, 50);
+            doc.text("Edad: " + edadCliente, 20, 60);
+            doc.text("Género: " + genero, 20, 70);
+            doc.text("Dirección: " + direccion, 20, 80);
+            doc.text("Teléfono: " + telefono, 20, 90);
+            doc.text("Correo Electrónico: " + correoElectronico, 20, 100);
+            doc.text("NIT: " + nit, 20, 110);
+            doc.text("Factura: " + factura, 20, 120);
+
+            // Guardar el PDF con un nombre personalizado
+            doc.save("Registro_Usuario.pdf");
+        }
+    </script>
+
+</body>
+</html>

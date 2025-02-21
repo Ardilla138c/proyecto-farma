@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmardilla</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Iconos CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Animaciones -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        
+        /* Casos especiales */
+        .section-title {
+            font-size: 3rem; /* Ajusta según el tamaño deseado */
+            color: rgba(250, 255, 242, 0.811);
+            text-shadow: 2px 2px 5px rgba(24, 28, 240, 0.872);
+            text-align: center; /* Opcional, para centrar el texto */
+        }
+        
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .img-left, .img-right {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        /* opacidad de animacion */
+        .aos-init {
+            opacity: 0;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.5rem; 
+        }
+        .social-icons i {
+            font-size: 1.8rem; 
+        }
+        .h5 {
+            font-size: 2rem; 
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body style="background-color: #fffffff7;">
+    
+    
+    <!-- Barr         supe -->
+    <div class="bg-write text-dark py-2" style="font-family: Bodoni MT;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <img src="/images/farmardilla.jpg" alt="farmacias" style="height: 90px; margin-right: 10px; margin-bottom:auto ">
+                <span class="h5" style="margin-top: font font-family: Bodoni MT, "Helvetica Neue", Helvetica, sans-serif; 20px;"></span>
+            </div>
+            <div class="social-icons">
+                <!-- iconos redes sociales -->
+                <a href="#" class="text-dark mx-2"><i class="bi bi-facebook" style="height: 90px;"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra  navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0317aa;">
+        
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    
+                    <li class="nav-item ms-4"><a class="nav-link" href="indexValid.html"><i class="bi bi-house-door"></i> Inicio </a></li>
+                    <li class="nav-item ms-4"><a class="nav-link" href="productos.html"><i class="bi bi-envelope"></i> Farmacos disponibles</a></li>
+            
+            
+                </ul>nta
+            </div>
+        </div>
+    </nav>
+    <!-- Sección de Contacto -->
+    <section class="container my-5">
+        <h2 class="section-title text-center text-white" data-aos="fade-up">Contáctanos</h2>
+        <div class="row">
+            <div class="col-md-6 contact-info text-white" data-aos="fade-right" data-aos-delay="200">
+                <h4>Dirección</h4>
+                <p class="section-content">Nuestra oficina principal está ubicada en el aula 104:</p>
+                <p><span class="title">Dirección:</span> Av. Irigoyen mismas  instalaciones de la UPDS.</p>
+                <p><span class="title">Teléfonos: 70763090</span></p>
+                <ul>
+                    <li><strong>Oficina Principal:</strong> + 591 70763090</li>
+                    <li><strong>Atención al Cliente:</strong> +591 70763090</li>
+                    <li><strong>Fax:</strong> + 591 70763090</li>
+                </ul>
+                <p><span class="title">Correo Electrónico: ardillacmzr@gmail.com</span></p>
+                <ul>
+                    <li><strong>General:</strong> contacto@futbolboliviano.org</li>
+                    <li><strong>Soporte:</strong> soporte@futbolboliviano.org</li>
+                    <li><strong>Ventas:</strong> ventas@futbolboliviano.org</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 " data-aos="fade-left" data-aos-delay="200">
+                <h4 style=""></h4>
+                <form class="form-container" action="submit_form.php" method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Número de Celular</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Escribe tu número de celular" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn w-100" style="background-color: rgba(24,28,240,0.872); color: #fff;">Enviar Mensaje</button>
+                    
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-red-700 text-white text-center py-4 mt-6"> 
+
+        <p style="background-color: rgba(24, 28, 240, 0.872); color: white; padding: 10px; text-align: center;">&copy; 2025 Claudia Zapata.Desarrollo de sistemas UPDS Todos los derechos reservados.</p>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   
+   <script>
+        AOS.init();
+    </script>
+</body>
+</html>

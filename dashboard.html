@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmardilla</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Iconos CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Animaciones -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        
+        /* Casos especiales */
+        .section-title {
+            font-size: 3rem; /* Ajusta según el tamaño deseado */
+            color: rgba(250, 255, 242, 0.811);
+            text-shadow: 2px 2px 5px rgba(24, 28, 240, 0.872);
+            text-align: center; /* Opcional, para centrar el texto */
+        }
+        
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .img-left, .img-right {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        /* opacidad de animacion */
+        .aos-init {
+            opacity: 0;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.5rem; 
+        }
+        .social-icons i {
+            font-size: 1.8rem; 
+        }
+        .h5 {
+            font-size: 2rem; 
+        }
+        
+        
+        
+    </style>
+</head>
+
+<body style="background-color: #fffffff7;">
+    
+    
+    <!-- Barr         supe -->
+    <div class="bg-write text-dark py-2" style="font-family: Bodoni MT;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <img src="/images/farmardilla.jpg" alt="farmacias" style="height: 90px; margin-right: 10px; margin-bottom:auto ">
+                <span class="h5" style="margin-top: font font-family: Bodoni MT, "Helvetica Neue", Helvetica, sans-serif; 20px;"></span>
+            </div>
+            <div class="social-icons">
+                <!-- iconos redes sociales -->
+                <a href="#" class="text-dark mx-2"><i class="bi bi-facebook" style="height: 90px;"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra  navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0317aa;">
+        
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ms-4"><a class="nav-link" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+
+                </ul>nta
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container mt-4">
+        <h1 class="text-center">Dashboard</h1>
+        
+        <div class="row">
+            <!-- Contador de clientes -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center bg-primary text-white p-4">
+                    <h3><i class="bi bi-people"></i> Clientes</h3>
+                    <h2 id="totalClientes">250</h2>
+                </div>
+            </div>
+            
+            <!-- Tipo de cambio -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center bg-success text-white p-4">
+                    <h3><i class="bi bi-cash"></i> Tipo de Cambio</h3>
+                    <h2 id="tipoCambio">Bs. 6.96</h2>
+                </div>
+            </div>
+            
+            <!-- Producto más vendido -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center bg-warning text-white p-4">
+                    <h3><i class="bi bi-box"></i> Producto Más Vendido</h3>
+                    <h2 id="productoMasVendido">Paracetamol</h2>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <!-- Gráfica de ventas -->
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="text-center">Ventas por Producto</h5>
+                    <canvas id="ventasProductos"></canvas>
+                </div>
+            </div>
+            
+            <!-- Gráfica de clientes -->
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5 class="text-center">Nuevos Clientes Mensuales</h5>
+                    <canvas id="clientesMensuales"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-red-700 text-white text-center py-4 mt-6"> 
+
+        <p style="background-color: rgba(24, 28, 240, 0.872); color: white; padding: 10px; text-align: center;">&copy; 2025 Claudia Zapata.Desarrollo de sistemas UPDS Todos los derechos reservados.</p>
+
+    </footer>
+
+    <script>
+        // Datos para gráfica de ventas por producto
+        const ctx1 = document.getElementById('ventasProductos').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Paracetamol', 'Ibuprofeno', 'Omeprazol', 'Amoxicilina'],
+                datasets: [{
+                    label: 'Ventas',
+                    data: [120, 90, 75, 60],
+                    backgroundColor: ['blue', 'red', 'green', 'orange']
+                }]
+            }
+        });
+
+        // Datos para gráfica de clientes mensuales
+        const ctx2 = document.getElementById('clientesMensuales').getContext('2d');
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'],
+                datasets: [{
+                    label: 'Clientes Nuevos',
+                    data: [10, 20, 30, 40, 50],
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
